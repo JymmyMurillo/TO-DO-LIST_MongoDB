@@ -20,7 +20,7 @@ const App = () => {
     }, []);
 
     const addTodo = async (item) => {
-        const { data } = await todos.post("/todos", item);
+        const { data } = await todos.post("/todos/new", item);
         setTodoList((oldList) => [...oldList, data]);
     };
 
